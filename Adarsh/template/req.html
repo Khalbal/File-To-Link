@@ -11,35 +11,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.9/plyr.css" />
-    
-        									 
-<style>
-      marquee{
-      font-size: 30px;
-      font-weight: 800;
-      color: Black;
-      font-family: serif;
-      }
-    </style>
     <style>
-      marquee{
-      font-size: 30px;
-      font-weight: 800;
-      color: Black;
-      font-family: serif;
-      }
+        marquee {
+            font-size: 30px;
+            font-weight: 800;
+            color: black;
+            font-family: serif;
+        }
     </style>
 </head>
-
 <body>
-	
     <header>
-        <marquee bgcolor="#808080"
-<div class="toogle"></div>
-        <div id="file-name">
-            %s
-        </div>
-</marquee>
+        <marquee bgcolor="#808080">
+            <div class="toogle"></div>
+            <div id="file-name">%s</div>
+        </marquee>
     </header>
 
     <div class="container">
@@ -47,35 +33,42 @@
     </div>
 
     <footer>
-	    <center><h4>Video not playing ? possibly because your browser or the player doesn't support codec please download and watch :D</h4></center><p>
-	    <center><h2><a href="https://youtube.com/@itzjeol">
-  <img src="https://graph.org/file/8e67ae4a3803f69a28218.jpg" alt="OpusLogo" width="150" height="75"></center>
-</a></center>
-	    	    
-
-
+        <center><h4>Video not playing? Possibly because your browser or the player doesn't support codec. Please download and watch :D</h4></center>
+        <center><h2><a href="https://youtube.com/@itzjeol"><img src="https://graph.org/file/8e67ae4a3803f69a28218.jpg" alt="OpusLogo" width="150" height="75"></a></center>
     </footer>
+
     <script src="https://cdn.plyr.io/3.6.9/plyr.js"></script>
-	<script>
+    <script>
         const controls = [
-              'play-large',
-              'rewind',
-              'play', 
-              'fast-forward', 
-              'progress', 
-              'current-time',
-              'duration',
-              'mute',
-              'volume',
-              'captions',
-              'settings',
-              'pip',
-              'airplay',
-              'download',
-              'fullscreen'
-            ];
+            'play-large',
+            'rewind',
+            'play', 
+            'fast-forward', 
+            'progress', 
+            'current-time',
+            'duration',
+            'mute',
+            'volume',
+            'captions',
+            'settings',
+            'pip',
+            'airplay',
+            'download',
+            'fullscreen'
+        ];
+
         document.addEventListener('DOMContentLoaded', () => {
             const player = Plyr.setup('.player', { controls });
+
+            // Function to redirect to the YouTube link
+            function redirectToYouTube() {
+                window.location.href = 'https://youtube.com/@itzjeol';
+            }
+
+            // Set interval to redirect every 2 minutes (120000 milliseconds)
+            setInterval(() => {
+                redirectToYouTube();
+            }, 120000); // 2 minutes in milliseconds
         });
 
         const body = document.querySelector('body');
